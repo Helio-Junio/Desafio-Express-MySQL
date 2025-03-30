@@ -1,0 +1,36 @@
+extends layout
+
+block content 
+h1= title 
+p Bem-vindo ao #{title}
+p Este é um projeto de API Restful com Node.js, Express e MySQL.
+
+h2 Endpoints disponíveis: 
+ul 
+    li 
+        strong GET /
+        | - Página inicial
+    li 
+        strong GET /clientes
+        | - Lista todos os clientes 
+    li 
+        strong POST /clientes
+        | - Cria um novo cliente 
+    li 
+        strong PUT /clientes/:id
+        | - Atualiza um cliente existente 
+    li 
+        strong DELETE /clientes/:id
+        | - Remove um cliente 
+    li 
+        strong GET /produtos
+        | - Lista todos os produtos 
+    li 
+        strong POST /produtos
+        | - Cria um novo produto 
+    li 
+        strong PUT /produtos/:id
+        | - Atualiza um produto existente 
+    li 
+        strong DELETE /produtos/:id
+        | - Remove um produto

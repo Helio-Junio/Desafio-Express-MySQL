@@ -1,0 +1,10 @@
+{
+    "extends": "google",
+    "rules": {
+        "object-curly-spacing": 0,
+        "new-cap": 0,
+        "space-before-function-paren": 0,
+        "line-break-style": ["error", "windows"],
+        "indent": ["error", 4]
+    }
+}
