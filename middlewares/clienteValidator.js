@@ -19,8 +19,8 @@ const validateCliente = (req, res, next) => {
     }
 
     next();
-    };
+};
 
-    module.exports = {
-        validateCliente,
-    };
+module.exports = {
+    validateCliente,
+};
