@@ -1,21 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const clienteController = require('../controllers/clienteController');
-const {validateCliente} = require('../middlewares/clienteValidator');
+const { validateCliente } = require('../middlewares/clienteValidator');
+const { checkCache } = require('../middlewares/cacheMiddleware');
 
-// Listar todos os clientes
-router.get('/', clienteController.getAllClientes);
+// Aplicar middleware de cache apenas para rotas GET
+router.get('/', checkCache, clienteController.getAllClientes);
+router.get('/:id', checkCache, clienteController.getClienteById);
 
-//Buscar cliente por ID
-router.get('/:id', clienteController.getClienteById);
-
-//Criar um novo cliente
+// Rotas que modificam dados (sem cache)
 router.post('/', validateCliente, clienteController.createCliente);
-
-//Atualizar um cliente existente
 router.put('/:id', validateCliente, clienteController.updateCliente);
-
-//Remover um cliente
 router.delete('/:id', clienteController.deleteCliente);
 
 module.exports = router;

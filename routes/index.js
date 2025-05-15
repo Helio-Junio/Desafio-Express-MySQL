@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.status(200).json({ message: 'API Desafio Backend - Express + MySQL' });
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', { title: 'Desafio Back-End - Express + DB + Cache' });
 });
 
 module.exports = router;

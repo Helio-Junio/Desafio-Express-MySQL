@@ -1,5 +1,25 @@
-## Desafio Back-End 🔙🔚
-Esse desafio foi desenvolvido para sala de aula, pelo professor Lucas Rafael Martins.
+
+# Desafio Back-End - Express + DB + Caching 🔙🔚
+
+Este projeto é uma API RESTful construída com Node.js, Express e MySQL, com implementação de sistema de cache para otimizar o desempenho.
+
+## Tecnologias Utilizadas
+
+- **Node.js**: Ambiente de execução JavaScript server-side
+- **Express**: Framework web para Node.js
+- **MySQL**: Banco de dados relacional
+- **Node-Cache**: Sistema de cache em memória
+- **Dotenv**: Gerenciamento de variáveis de ambiente
+- **Chalk**: Estilização de logs no console
+
+## Funcionalidades
+
+- CRUD completo para clientes e produtos
+- Sistema de cache para otimizar consultas ao endpoint `/clientes`
+- Logs detalhados indicando se os dados foram recuperados do cache ou do banco
+- Invalidação automática do cache após 30 segundos
+- Invalidação do cache quando há modificações nos dados
+
 
 ## Imagens 📸
 <div align="center">
