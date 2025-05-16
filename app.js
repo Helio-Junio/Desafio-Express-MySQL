@@ -21,15 +21,15 @@ logger.token('colored-method', (req) => {
   const method = req.method;
   switch (method) {
     case 'GET':
-        return colors.green(method);
+      return colors.green(method);
     case 'POST':
-        return colors.blue(method);
+      return colors.blue(method);
     case 'PUT':
-        return colors.yellow(method);
+      return colors.yellow(method);
     case 'DELETE':
-        return colors.red(method);
+      return colors.red(method);
     default:
-        return method;
+      return method;
   }
 });
 

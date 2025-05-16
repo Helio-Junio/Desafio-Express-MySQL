@@ -1,13 +1,13 @@
 const clienteService = require('../services/clienteService');
-const chalk = require('chalk');
+const colors = require('colors');
 
 const getAllClientes = async (req, res) => {
   try {
-    console.log(chalk.cyan('Requisição GET para /clientes'));
+    console.log(colors.cyan('Requisição GET para /clientes'));
     const clientes = await clienteService.getAllClientes(req);
     res.status(200).json(clientes);
   } catch (error) {
-    console.error(chalk.red('Erro ao buscar clientes:'), error);
+    console.error(colors.red('Erro ao buscar clientes:'), error);
     res.status(500).json({ error: error.message });
   }
 };
@@ -15,7 +15,7 @@ const getAllClientes = async (req, res) => {
 const getClienteById = async (req, res) => {
   try {
     const id = parseInt(req.params.id);
-    console.log(chalk.cyan(`Requisição GET para /clientes/${id}`));
+    console.log(colors.cyan(`Requisição GET para /clientes/${id}`));
     
     const cliente = await clienteService.getClienteById(req, id);
     
@@ -25,18 +25,18 @@ const getClienteById = async (req, res) => {
     
     res.status(200).json(cliente);
   } catch (error) {
-    console.error(chalk.red(`Erro ao buscar cliente ID ${req.params.id}:`), error);
+    console.error(colors.red(`Erro ao buscar cliente ID ${req.params.id}:`), error);
     res.status(500).json({ error: error.message });
   }
 };
 
 const createCliente = async (req, res) => {
   try {
-    console.log(chalk.cyan('Requisição POST para /clientes'));
+    console.log(colors.cyan('Requisição POST para /clientes'));
     const newCliente = await clienteService.createCliente(req.body);
     res.status(201).json(newCliente);
   } catch (error) {
-    console.error(chalk.red('Erro ao criar cliente:'), error);
+    console.error(colors.red('Erro ao criar cliente:'), error);
     res.status(500).json({ error: error.message });
   }
 };
@@ -44,7 +44,7 @@ const createCliente = async (req, res) => {
 const updateCliente = async (req, res) => {
   try {
     const id = parseInt(req.params.id);
-    console.log(chalk.cyan(`Requisição PUT para /clientes/${id}`));
+    console.log(colors.cyan(`Requisição PUT para /clientes/${id}`));
     
     // Verificar se o cliente existe
     const clienteExists = await clienteService.getClienteById(req, id);
@@ -55,7 +55,7 @@ const updateCliente = async (req, res) => {
     const updatedCliente = await clienteService.updateCliente(id, req.body);
     res.status(200).json(updatedCliente);
   } catch (error) {
-    console.error(chalk.red(`Erro ao atualizar cliente ID ${req.params.id}:`), error);
+    console.error(colors.red(`Erro ao atualizar cliente ID ${req.params.id}:`), error);
     res.status(500).json({ error: error.message });
   }
 };
@@ -63,7 +63,7 @@ const updateCliente = async (req, res) => {
 const deleteCliente = async (req, res) => {
   try {
     const id = parseInt(req.params.id);
-    console.log(chalk.cyan(`Requisição DELETE para /clientes/${id}`));
+    console.log(colors.cyan(`Requisição DELETE para /clientes/${id}`));
     
     // Verificar se o cliente existe
     const clienteExists = await clienteService.getClienteById(req, id);
@@ -74,7 +74,7 @@ const deleteCliente = async (req, res) => {
     await clienteService.deleteCliente(id);
     res.status(200).json({ message: 'Cliente removido com sucesso' });
   } catch (error) {
-    console.error(chalk.red(`Erro ao remover cliente ID ${req.params.id}:`), error);
+    console.error(colors.red(`Erro ao remover cliente ID ${req.params.id}:`), error);
     res.status(500).json({ error: error.message });
   }
 };
