@@ -10,7 +10,7 @@ Este projeto é uma API RESTful construída com Node.js, Express e MySQL, com im
 - **MySQL**: Banco de dados relacional
 - **Node-Cache**: Sistema de cache em memória
 - **Dotenv**: Gerenciamento de variáveis de ambiente
-- **Chalk**: Estilização de logs no console
+- **Colors**: Estilização de logs no console
 
 ## Funcionalidades
 
