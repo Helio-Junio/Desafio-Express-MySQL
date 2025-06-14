@@ -17,6 +17,7 @@
   "author": "Helio Junio, Guilherme Salatiel, Oscar Lara",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "chalk": "^5.4.1",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.7",
@@ -26,6 +27,7 @@
     "express": "^4.21.2",
     "http-errors": "^2.0.0",
     "jade": "^1.11.0",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "mysql2": "^3.14.1",
     "node-cache": "^5.1.2"
