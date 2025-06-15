@@ -11,6 +11,9 @@ Este projeto é uma API RESTful construída com Node.js, Express e MySQL, com im
 - **Node-Cache**: Sistema de cache em memória
 - **Dotenv**: Gerenciamento de variáveis de ambiente
 - **Chalk**: Estilização de logs no console
+- **JWT (JSON Web Tokens)**
+- **bcrypt**
+- **Jest + Supertest**
 
 ## Funcionalidades
 
@@ -19,6 +22,7 @@ Este projeto é uma API RESTful construída com Node.js, Express e MySQL, com im
 - Logs detalhados indicando se os dados foram recuperados do cache ou do banco
 - Invalidação automática do cache após 30 segundos
 - Invalidação do cache quando há modificações nos dados
+
 
 
 ## Imagens 📸
@@ -38,6 +42,6 @@ Este projeto é uma API RESTful construída com Node.js, Express e MySQL, com im
 </div>
 
 ## Autores 🧑‍🚀
- * Hélio Ferreira
- * Guilherme Salatiel
- * Oscar Lara
+ - **Hélio Ferreira**
+ - **Guilherme Salatiel**
+ - **Oscar Lara**

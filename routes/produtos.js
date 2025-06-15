@@ -1,13 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const produtoController = require('../controllers/produtoController');
-const { validateProduto } = require('../middlewares/produtoValidator');
+const produtosController = require('../controllers/produtosController');
 
-// Produtos não usam cache conforme o desafio
-router.get('/', produtoController.getAllProdutos);
-router.get('/:id', produtoController.getProdutoById);
-router.post('/', validateProduto, produtoController.createProduto);
-router.put('/:id', validateProduto, produtoController.updateProduto);
-router.delete('/:id', produtoController.deleteProduto);
+router.get('/', produtosController.getAllProdutos);
+router.post('/', produtosController.createProduto);
+router.put('/:id', produtosController.updateProduto);
+router.delete('/:id', produtosController.deleteProduto);
 
 module.exports = router;
