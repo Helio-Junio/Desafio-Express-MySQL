@@ -14,9 +14,7 @@ exports.createUsuario = async (req, res) => {
   try {
     console.log('Iniciando a criação do usuário...');
     const usuario = req.body;
-    console.log('ANTES do await');
     const newUser = await usuariosService.createUsuario(usuario);
-    console.log('DEPOIS do await');
     console.log('Usuário criado com sucesso:', newUser);
     res.status(201).json(newUser);
   } catch (error) {

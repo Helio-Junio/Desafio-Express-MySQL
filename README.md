@@ -23,6 +23,29 @@ Este projeto é uma API RESTful construída com Node.js, Express e MySQL, com im
 - Invalidação automática do cache após 30 segundos
 - Invalidação do cache quando há modificações nos dados
 
+### ROTAS PÚBLICAS (sem autenticação):
+- GET /                    → Verificar se servidor está online
+- POST /login             → Fazer login e receber token
+- GET /produtos           → Listar produtos
+- POST /produtos          → Criar produto
+- PUT /produtos/:id       → Atualizar produto
+- DELETE /produtos/:id    → Deletar produto
+- GET /usuarios           → Listar usuários
+- POST /usuarios          → Criar usuário
+
+### ROTAS PROTEGIDAS (requer token JWT):
+- POST /logout            → Fazer logout
+- GET /clientes           → Listar clientes (COM CACHE)
+- POST /clientes          → Criar cliente
+- PUT /clientes/:id       → Atualizar cliente
+- DELETE /clientes/:id    → Deletar cliente
+
+### FLUXO DE AUTENTICAÇÃO:
+1. POST /usuarios         → Criar um usuário
+2. POST /login           → Fazer login (recebe token)
+3. GET /clientes         → Usar token no header
+4. POST /logout          → Invalidar token
+
 
 
 ## Imagens 📸
